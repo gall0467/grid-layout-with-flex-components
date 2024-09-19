@@ -1,48 +1,46 @@
-/* ************************************************************ */
+                /* ******************************* */
+/* ************************************************************* */
                     /* ASSIGNMENT TASK LIST */
-/* ************************************************************ */
+/* ************************************************************* */
+                /* ******************************* */
 
-/* ************************************************************ */
 /* 
-            *DID*
+*TO-DO*
 - Add a CSS file to your project and copy the base CSS code from the README.md file. 
 - Write the rest of the CSS to match your final HTML/CSS page with the image below.
-
-
-            *TO-DO*
 - Use the grid properties to layout the emoji cards.
 - Use the flexbox properties to layout the content of the emoji cards.
 - Display the emoji card content in proper order as per the image.
 - The buttons in each card should be aligned with the bottom of the card using a flexbox property.
 - Setup GitHub pages site for your repository.
-- Test the GitHub pages URL and submit it for assessment. 
+- Test the GitHub pages URL and submit it for assessment.  
 */
 
-
-                /* ****************************** */
-/* ************************************************************** */
+                /* ******************************* */
+/* *************************************************************** */
                     /* CSS CODE FROM README.md */
-/* ************************************************************** */
-                /* ****************************** */
+/* *************************************************************** */
+                /* ******************************* */
 
+/* 
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
   }
   
-  .emoji {
+.emoji {
     border: 1px solid #222;
     border-radius: 8px;
     padding: 1rem;
   }
   
-  .emoji h2 {
+.emoji h2 {
     margin: 0;
     border-bottom: 2px solid #ccc;
   }
   
-  .emoji a {
+.emoji a {
     text-decoration: none;
     background-color: #781BAA;
     color: white;
@@ -50,37 +48,133 @@ body {
     border-radius: 8px;
   }
   
-  .icon {
+.icon {
     font-size: 4rem;
-  }
+  } 
+  
+  */
 
-/* ************************************************************ */
-/* GRID properties - to layout the emoji cards */
-/* ************************************************************ */
 
-/* REFERENCE */
-/* ORDER */
-/* Smiley        Beer */
-/* LMAO          Seedling */
+                /* ******************************* */
+/* *************************************************************** */
+        /* GRID+FLEX properties - to layout the emoji cards */
+/* *************************************************************** */
+                /* ******************************* */
 
-/* HTML */
-/* main 
-  div.emojis
-    div.emoji
-        span.icon 
-    div/
+        /* After all that wasted space, here is assignment :) */
+            /* (prepare for more wasted space haha) */
 
-    div.emoji
-        span.icon
-    div/
 
-    div.emoji
-        span.icon
-    div/
+                /* ******************************* */
+/* *************************************************************** */
+/* *************************************************************** */
+/* *************************************************************** */
 
-    div.emoji
-        span.icon
-    div/
-  div/
-main/ */
+    /* (keep the same) */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
 
+
+.emoji {
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 1rem;
+
+/* *************************************************************** */
+
+    /* flex the parent, establish order */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+/* *************************************************************** */
+
+}
+
+
+.emoji h2 {
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+
+/* *************************************************************** */
+
+    /* (put headings on the bottom of emoji) */
+
+    order: 2;
+    font-size: 1.6rem;
+
+/* *************************************************************** */
+
+}
+
+
+.emoji a {
+    text-decoration: none;
+    background-color: #781BAA;
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+
+/* *************************************************************** */
+
+    /* (there will be order [buttons]) */
+    order: 4;
+
+/* *************************************************************** */
+
+}
+
+
+.icon {
+    font-size: 4rem;
+
+/* *************************************************************** */
+
+    /* (ORDER... and ALIGNMENT) */
+    text-align: center;
+    margin: 1rem 0;
+    order: 1;
+
+/* *************************************************************** */
+
+}
+
+
+
+/* *************************************************************** */
+/* *************************************************************** */
+/* (grid for this parent element, must organize the emoji cards) */
+.emojis {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    max-width: 900px;
+}
+/* *************************************************************** */
+/* *************************************************************** */
+
+
+/* *************************************************************** */
+/* *************************************************************** */
+                        /* (OORDEEERR! */
+.emoji p {
+    flex-grow: 1;
+    margin-top: 1rem;
+    font-weight: bold;
+    order: 3;
+}
+/* *************************************************************** */
+/* *************************************************************** */
+
+                    /* badabing badaboom */
+
+/* *************************************************************** */
+/* *************************************************************** */
+/* *************************************************************** */
+                /* ******************************* */
+
+/* NOTES: */
+/* Did so much work in class (when you releeased this assignment) and figured I'd leave all my notes and formatting from then, and just continue and embelish on that */
